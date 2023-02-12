@@ -9,7 +9,10 @@ opt.tabstop = 2
 opt.shiftwidth = 2
 opt.expandtab = true
 opt.autoindent = true
+opt.breakindent = true
 
+-- set completeopt to have a better copletion experience
+opt.completeopt = "menuone,noselect"
 -- line wrapping
 opt.wrap = false
 
@@ -42,6 +45,6 @@ opt.scrolloff = 3
 
 -- Set an undo file to keep history of changes
 -- set undodir=~/.vim/undodir
-opt.undodir=vim.fn.stdpath('config') .. '/undodir'
+opt.undodir = vim.fn.stdpath("config") .. "/undodir"
 -- opt.undodir = "~/.config/nvim/undodir"
 opt.undofile = true

@@ -12,6 +12,15 @@ treesitter.setup({
 	},
 	-- enable indentation
 	indent = { enable = true, disable = { "python" } },
+	incremental_selection = {
+		enable = true,
+		keymaps = {
+			init_selection = "<c-space>",
+			node_incremental = "<c-space>",
+			scope_incremental = "<c-s>",
+			node_decremental = "<c-backspace>",
+		},
+	},
 	-- enable autotagging (w/ nvim-ts-autotag plugin)
 	autotag = { enable = true },
 	-- ensure these language parsers are installed
@@ -22,7 +31,12 @@ treesitter.setup({
 		"tsx",
 		"yaml",
 		"html",
+		"c",
+		"cpp",
 		"css",
+		"rust",
+		"help",
+		"go",
 		"markdown",
 		"svelte",
 		"python",
