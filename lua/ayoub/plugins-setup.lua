@@ -36,6 +36,7 @@ end
 return lazy.setup({
 	"nvim-lua/plenary.nvim", -- lua functions that many plugins use
 	"bluz71/vim-nightfly-guicolors",
+	-- "rebelot/kanagawa.nvim",
 	-- tmux & split window navigation
 	"christoomey/vim-tmux-navigator",
 	-- "szw/vim-maximizer", -- maximizes and restores current window
@@ -108,6 +109,18 @@ return lazy.setup({
 			vim.o.timeout = true
 			vim.o.timeoutlen = 300
 			require("which-key").setup({
+				-- your configuration comes here
+				-- or leave it empty to use the default settings
+				-- refer to the configuration section below
+			})
+		end,
+	},
+	-- Lua
+	{
+		"folke/todo-comments.nvim",
+		dependencies = "nvim-lua/plenary.nvim",
+		config = function()
+			require("todo-comments").setup({
 				-- your configuration comes here
 				-- or leave it empty to use the default settings
 				-- refer to the configuration section below
