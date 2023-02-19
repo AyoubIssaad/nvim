@@ -1,3 +1,7 @@
+-- lazy apparently requires leader key already set:
+vim.g.mapleader = " "
+vim.g.maplocalleader = " "
+
 -- Install lazy automatically if not already installed on the system
 
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
@@ -12,21 +16,6 @@ if not vim.loop.fs_stat(lazypath) then
 	})
 end
 vim.opt.rtp:prepend(lazypath)
--- require("lazy").setup(plugins, opts)
-
--- lazy apparently requires leader key already set:
-vim.g.mapleader = " "
-vim.g.maplocalleader = " "
-
--- local packer_bootstrap = ensure_packer()
-
--- -- Autocommand that reloads neovim whenever you save this file
--- vim.cmd([[
---   augroup packer_user_config
---     autocmd!
---     autocmd BufWritePost plugins-setup.lua source <afile> | PackerSync
---   augroup end
--- ]])
 
 local status, lazy = pcall(require, "lazy")
 if not status then
@@ -35,14 +24,20 @@ end
 
 return lazy.setup({
 	"nvim-lua/plenary.nvim", -- lua functions that many plugins use
-	"bluz71/vim-nightfly-guicolors",
+	-- Git related plugins
+	"tpope/vim-fugitive",
+	"tpope/vim-rhubarb",
+	-- Detect tabstop and shiftwidth automatically
+	"tpope/vim-sleuth",
+	-- "bluz71/vim-nightfly-guicolors",
+	{ "bluz71/vim-nightfly-colors", name = "nightfly", lazy = true, priority = 1000 },
 	-- "rebelot/kanagawa.nvim",
 	-- tmux & split window navigation
-	"christoomey/vim-tmux-navigator",
+	{ "christoomey/vim-tmux-navigator" },
 	-- "szw/vim-maximizer", -- maximizes and restores current window
 	-- Essential plugins
-	"tpope/vim-surround", -- add, delete, change surroundings (it's awesome)
-	"numToStr/Comment.nvim",
+	{ "tpope/vim-surround", lazy = false }, -- add, delete, change surroundings (it's awesome)
+	{ "numToStr/Comment.nvim", lazy = true },
 	-- file explorer
 	"nvim-tree/nvim-tree.lua",
 	-- vs-code like icons
