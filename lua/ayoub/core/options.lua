@@ -48,3 +48,7 @@ opt.scrolloff = 3
 opt.undodir = vim.fn.stdpath("config") .. "/undodir"
 -- opt.undodir = "~/.config/nvim/undodir"
 opt.undofile = true
+-- Decrease update time
+vim.o.updatetime = 250
+vim.o.timeout = true
+vim.o.timeoutlen = 300
