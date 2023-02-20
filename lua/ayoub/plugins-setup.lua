@@ -115,4 +115,12 @@ return lazy.setup({
 			})
 		end,
 	},
+	{
+		"goolord/alpha-nvim",
+		enabled = true,
+		requires = { "nvim-tree/nvim-web-devicons" },
+		config = function()
+			require("alpha").setup(require("alpha.themes.dashboard").config)
+		end,
+	},
 })
