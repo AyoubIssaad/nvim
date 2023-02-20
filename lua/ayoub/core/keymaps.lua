@@ -4,7 +4,9 @@ local keymap = vim.keymap -- for conciseness
 
 -- general keymaps
 
-keymap.set("i", "jk", "<ESC>") -- Exit insert mode with jk 
+keymap.set("i", "jk", "<ESC>") -- Exit insert mode with jk
+
+keymap.set("n", "<leader>h", "*#") -- Exit insert mode with jk
 
 keymap.set("n", "<leader>nh", ":nohl<CR>") -- remove word highlights after search
 
