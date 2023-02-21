@@ -117,10 +117,26 @@ return lazy.setup({
 	},
 	{
 		"goolord/alpha-nvim",
-		enabled = true,
+		enabled = false,
 		requires = { "nvim-tree/nvim-web-devicons" },
 		config = function()
 			require("alpha").setup(require("alpha.themes.dashboard").config)
 		end,
+	},
+}, {
+	checker = { enabled = true },
+	performance = {
+		rtp = {
+			disabled_plugins = {
+				-- "matchit",
+				-- "matchparen",
+				-- "gzip",
+				-- "netrwPlugin",
+				-- "tarPlugin",
+				-- "tohtml",
+				-- "tutor",
+				-- "zipPlugin",
+			},
+		},
 	},
 })
