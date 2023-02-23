@@ -115,6 +115,13 @@ return lazy.setup({
 			})
 		end,
 	},
+	-- {
+	-- 	"ThePrimeagen/refactoring.nvim",
+	-- 	requires = {
+	-- 		{ "nvim-lua/plenary.nvim" },
+	-- 		{ "nvim-treesitter/nvim-treesitter" },
+	-- 	},
+	-- },
 	{
 		"goolord/alpha-nvim",
 		enabled = false,
@@ -124,7 +131,7 @@ return lazy.setup({
 		end,
 	},
 }, {
-	checker = { enabled = true },
+	checker = { enabled = false },
 	performance = {
 		rtp = {
 			disabled_plugins = {
