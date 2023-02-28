@@ -52,3 +52,7 @@ opt.undofile = true
 vim.o.updatetime = 250
 vim.o.timeout = true
 vim.o.timeoutlen = 300
+
+-- Spell checking configuration
+opt.spelllang = "en_us"
+opt.spell = true
