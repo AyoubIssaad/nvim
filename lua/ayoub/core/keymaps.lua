@@ -18,6 +18,10 @@ keymap.set("i", "<C-e>", "<C-o>A") -- Use ctl-e to move to the end of line when 
 -- keymap.set("n", "<leader>+", "<C-a>")
 -- keymap.set("n", "<leader>-", "<C-x>")
 
+-- Switch between buffers using left and right arrows
+keymap.set("n", "<left>", ":bp<cr>")
+keymap.set("n", "<right>", ":bn<cr>")
+
 -- window management
 keymap.set("n", "<leader>sv", "<C-w>v") -- split window vertically
 keymap.set("n", "<leader>sh", "<C-w>s") -- split window horizontally

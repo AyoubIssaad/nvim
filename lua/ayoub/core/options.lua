@@ -55,4 +55,4 @@ vim.o.timeoutlen = 300
 
 -- Spell checking configuration
 opt.spelllang = "en_us"
-opt.spell = true
+-- opt.spell = true
