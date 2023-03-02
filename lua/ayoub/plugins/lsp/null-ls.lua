@@ -27,6 +27,7 @@ null_ls.setup({
 			end,
 		}),
 		diagnostics.flake8,
+		diagnostics.shellcheck,
 	},
 	-- configure format on save
 	on_attach = function(current_client, bufnr)
