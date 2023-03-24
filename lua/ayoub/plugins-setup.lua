@@ -25,8 +25,8 @@ end
 return lazy.setup({
 	"nvim-lua/plenary.nvim", -- lua functions that many plugins use
 	-- Git related plugins
-	"tpope/vim-fugitive",
-	"tpope/vim-rhubarb",
+	{ "tpope/vim-fugitive", enabled = false },
+	{ "tpope/vim-rhubarb", enabled = false },
 	-- Detect tabstop and shiftwidth automatically
 	"tpope/vim-sleuth",
 	-- "bluz71/vim-nightfly-guicolors",
@@ -148,7 +148,24 @@ return lazy.setup({
 	-- 		})
 	-- 	end,
 	-- },
-	"unblevable/quick-scope",
+	{
+		"unblevable/quick-scope",
+		enabled = false,
+	},
+	{
+		"jackMort/ChatGPT.nvim",
+		enabled = false,
+		config = function()
+			require("chatgpt").setup({
+				-- optional configuration
+			})
+		end,
+		dependencies = {
+			"MunifTanjim/nui.nvim",
+			"nvim-lua/plenary.nvim",
+			"nvim-telescope/telescope.nvim",
+		},
+	},
 }, {
 	checker = { enabled = false },
 	performance = {
