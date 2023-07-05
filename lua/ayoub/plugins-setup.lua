@@ -90,7 +90,9 @@ return lazy.setup({
 
 	-- git integration
 	"lewis6991/gitsigns.nvim", -- show line modifications on left hand side
-	{ "j-hui/fidget.nvim" },
+	{ "j-hui/fidget.nvim",
+	tag =  "legacy"
+	},
 	{
 		"folke/which-key.nvim",
 		config = function()
