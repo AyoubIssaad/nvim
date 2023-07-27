@@ -6,9 +6,12 @@ local keymap = vim.keymap -- for conciseness
 
 keymap.set("i", "jk", "<ESC>") -- Exit insert mode with jk
 
-keymap.set("n", "<leader>h", "*#") -- Exit insert mode with jk
+keymap.set("n", "<leader>h", "*#") -- Highlight word under cursor
 
 keymap.set("n", "<leader>nh", ":nohl<CR>") -- remove word highlights after search
+
+keymap.set("v", "<leader>y", [["+y]]) -- yank from vim to system clipboard, could be also "*y depending on system
+keymap.set("n", "<leader>p", [["+p]]) -- paste from system clipboard to vim, could be also "*p depending on system
 
 keymap.set("n", "x", '"_x') -- When clicking on x in normal mode, the character is not copied into the register
 
@@ -27,6 +30,9 @@ keymap.set("n", "<leader>sv", "<C-w>v") -- split window vertically
 keymap.set("n", "<leader>sh", "<C-w>s") -- split window horizontally
 keymap.set("n", "<leader>se", "<C-w>=") -- make split windows equal width & height
 keymap.set("n", "<leader>sx", ":close<CR>") -- close current split window
+
+-- Toggle scrollbind for all open windows/splits
+keymap.set("n", "<F5>", ":windo set scb!<cr>")
 
 keymap.set("n", "<leader>to", ":tabnew<CR>") -- open new tab
 -- keymap.set("n", "<leader>tx", ":tabclose<CR>") -- close current tab
