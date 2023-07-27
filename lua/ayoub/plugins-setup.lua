@@ -31,6 +31,7 @@ return lazy.setup({
 	"tpope/vim-sleuth",
 	-- "bluz71/vim-nightfly-guicolors",
 	{ "bluz71/vim-nightfly-colors", name = "nightfly", lazy = true, priority = 1000 },
+	{ "xiyaowong/transparent.nvim", lazy = false },
 	-- "rebelot/kanagawa.nvim",
 	-- tmux & split window navigation
 	{ "christoomey/vim-tmux-navigator" },
@@ -90,9 +91,7 @@ return lazy.setup({
 
 	-- git integration
 	"lewis6991/gitsigns.nvim", -- show line modifications on left hand side
-	{ "j-hui/fidget.nvim",
-	tag =  "legacy"
-	},
+	{ "j-hui/fidget.nvim", tag = "legacy" },
 	{
 		"folke/which-key.nvim",
 		config = function()
