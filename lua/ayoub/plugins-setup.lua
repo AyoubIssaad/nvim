@@ -30,7 +30,7 @@ return lazy.setup({
 	-- Detect tabstop and shiftwidth automatically
 	"tpope/vim-sleuth",
 	-- "bluz71/vim-nightfly-guicolors",
-	{ "bluz71/vim-nightfly-colors", name = "nightfly", lazy = true, priority = 1000 },
+	{ "bluz71/vim-nightfly-guicolors", name = "nightfly", lazy = false, priority = 1000 },
 	{ "xiyaowong/transparent.nvim", lazy = false },
 	-- "rebelot/kanagawa.nvim",
 	-- tmux & split window navigation
@@ -104,6 +104,7 @@ return lazy.setup({
 			})
 		end,
 	},
+	{ "akinsho/bufferline.nvim", enabled = false, version = "*", dependencies = "nvim-tree/nvim-web-devicons" },
 	-- Lua
 	{
 		"folke/todo-comments.nvim",
