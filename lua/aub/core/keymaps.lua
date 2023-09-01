@@ -11,8 +11,6 @@ keymap.set("i", "jk", "<ESC>", { desc = "Exit insert mode with jk" })
 
 keymap.set("n", "<leader>h", "*#") -- Highlight word under cursor
 
-keymap.set("n", "<leader>nh", ":nohl<CR>") -- remove word highlights after search
-
 keymap.set("v", "<leader>y", [["+y]]) -- yank from vim to system clipboard, could be also "*y depending on system
 keymap.set("n", "<leader>p", [["+p]]) -- paste from system clipboard to vim, could be also "*p depending on system
 
